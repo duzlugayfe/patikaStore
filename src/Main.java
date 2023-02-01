@@ -150,7 +150,6 @@ public class Main {
                     String brandName = input.nextLine();
                     store.filterProducts(brandName);
                     break;
-
                 case 0:
                     System.out.println("Exiting the system...");
                     break;
