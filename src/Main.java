@@ -1,13 +1,14 @@
-import java.util.Scanner;
+import brands.Brand;
+import store.Store;
+import urunler.Notebook;
+import urunler.Smartphone;
 
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
         Store store = new Store();
         Scanner input = new Scanner(System.in);
-
-        // added given brands
         String[] brandNames = { "Samsung", "Lenovo", "Apple", "Huawei", "Casper", "Asus", "HP", "Xiaomi", "Monster" };
         for (int i = 0; i < brandNames.length; i++) {
             Brand brand = new Brand(i + 1, brandNames[i]);
@@ -19,7 +20,7 @@ public class Main {
             store.displayMenu();
             choice = input.nextInt();
             switch (choice) {
-                // handle notebook operations
+
                 case 1:
                     System.out.println("1 - Add notebook");
                     System.out.println("2 - Remove notebook by ID");
@@ -42,7 +43,7 @@ public class Main {
                                 break;
                             }
                             System.out.print("Enter notebook name: ");
-                            input.nextLine(); // to consume the remaining newline character
+                            input.nextLine();
                             String notebookName = input.nextLine();
                             System.out.print("Enter notebook price: ");
                             double notebookPrice = input.nextDouble();
@@ -76,7 +77,6 @@ public class Main {
                             break;
                     }
                     break;
-                // handle smartphone operations
                 case 2:
                     System.out.println("1 - Add Smartphone");
                     System.out.println("2 - Remove Smartphone by ID");
@@ -99,7 +99,7 @@ public class Main {
                                 break;
                             }
                             System.out.print("Enter smartphone name: ");
-                            input.nextLine(); // to consume the remaining newline character
+                            input.nextLine();
                             String smartphoneName = input.nextLine();
                             System.out.print("Enter smartphone price: ");
                             double smartphonePrice = input.nextDouble();
